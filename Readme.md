@@ -28,6 +28,9 @@ Este portafolio está diseñado siguiendo la estética **Catppuccin Mocha** y un
 └── assets/             # GIFs de simulaciones y recursos visuales
 ```
 
+## Versiones
+En el footer hay una versión, corresponde principalmente a los cambios que haga en la pagina a lo largo del tiempo, para poder llevar un control de mi progreso personal.
+
 ---
 
 *Creado por charly*
