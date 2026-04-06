@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="container">
@@ -24,7 +22,18 @@
             </div>
         </header>
 
-        <section id="projects">
+        <nav class="terminal-nav">
+            <a href="#home" data-section="home">~/home</a>
+            <a href="#proyectos" data-section="proyectos">./proyectos</a>
+            <a href="#contacto" data-section="contacto">cat contact-me.txt</a>
+        </nav>
+
+        <section id="home" class="content-section">
+            <p><span class="prompt">charly@neuro:~$</span> <span class="command">pwd</span></p>
+            <p>Bienvenido a mi portafolio personal. Aquí comparto proyectos, contacto y un poco de mi enfoque en neurociencias y modelado computacional.</p>
+        </section>
+
+        <section id="proyectos" class="content-section" style="display:none;">
             <p><span class="prompt">charly@neuro:~$</span> <span class="command">ls ./proyectos</span></p>
             
             <div class="card">
@@ -38,11 +47,19 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contacto" class="content-section" style="display:none;">
             <p><span class="prompt">charly@neuro:~$</span> <span class="command">cat contact-me.txt</span></p>
             <p>Email: <a href="mailto:palaciosc964@proton.me">palaciosc964@proton.me</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/carlos-martin-palacios-romero-20a71b221/" target="_blank">https://www.linkedin.com/in/carlos-martin-palacios-romero-20a71b221/</a></p>
         </section>
+
+        <footer>
+            <div class="footer-left">v1.0.2 | Built with HTML/CSS</div>
+            <div class="footer-right">Uptime: <span id="clock">00:00:00</span></div>
+        </footer>
     </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="Js/main.js"></script>
 </body>
 </html>
