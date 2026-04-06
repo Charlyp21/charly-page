@@ -1,0 +1,92 @@
+/* Paleta Catppuccin Mocha */
+        :root {
+            --base: #1e1e2e;
+            --text: #cdd6f4;
+            --subtext: #a6adc8;
+            --lavender: #b4befe;
+            --mauve: #cba6f7;
+            --sapphire: #74c7ec;
+            --surface0: #313244;
+        }
+
+        body {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: var(--base);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace; /* Fuente estilo terminal */
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            border-bottom: 2px solid var(--surface0);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .prompt { color: var(--lavender); font-weight: bold; }
+        .command { color: var(--sapphire); }
+
+        h1 { color: var(--mauve); font-size: 1.5rem; }
+
+        .card {
+            background: var(--surface0);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            transition: transform 0.2s ease; /* Pequeña animación */
+        }
+
+        .card:hover {
+            transform: translateX(10px);
+            background: #3c3e5a;
+        }
+
+        a { color: var(--sapphire); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Animación de cursor parpadeante */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--text);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        .terminal-header {
+        display: flex;
+        justify-content: space-between; /* Separa el texto del GIF */
+        align-items: center;
+        border-bottom: 2px solid var(--surface0);
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        }
+
+        .header-gif {
+        width: 100px; /* Ajusta el tamaño según tu GIF */
+        height: auto;
+        filter: drop-shadow(0 0 5px var(--mauve)); /* Efecto "glow" estilo terminal */
+        border-radius: 4px;
+        }
+
+    /* Para que en móviles se ponga uno arriba de otro */
+        @media (max-width: 600px) {
+        .terminal-header {
+        flex-direction: column;
+        text-align: center;
+        }
+        }
